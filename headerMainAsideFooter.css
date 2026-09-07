@@ -1,0 +1,441 @@
+/* Cores principais: Vermelho ( #FF0000 ) Preto ( #000000 ) Branco ( #FFFFFF ) */
+
+/* CONFIGURAÇÃO UNIVERSAL DO SITE */
+* {
+
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+    box-sizing: border-box;
+
+}
+
+/* CONFIGURAÇÃO DO BODY */
+body {
+
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial;
+
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+/* CONFIGURAÇÃO DO CABEÇALHO */
+header {
+
+    background-color: black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    height: auto;
+    min-height: 120px;
+    width: 100%;
+    min-width: 0;
+
+    padding: 15px 30px;
+
+    border-bottom: 2px solid red;
+
+}
+
+/* LOGO DO HEADER */
+.header_divLogo {
+
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+
+    margin-left: 0;
+
+    max-width: 100%;
+    min-width: 0;
+
+}
+
+.header_divLogo img {
+
+    flex-shrink: 1;
+    
+    height: 90px;
+    width: auto;
+    max-width: 100%;
+
+    object-fit: contain;
+
+}
+
+/* DIV DO HOME + PESQUISA */
+.header_divHoPes {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    flex-wrap: wrap;
+
+    text-align: center;
+
+    min-width: 0;
+    max-width: 100%;
+
+}
+
+.header_divHoPes img {
+
+    flex-shrink: 1;
+
+    text-align: center;
+
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+
+}
+
+.header_divHoPes a {
+
+    flex-shrink: 1;
+
+    text-decoration: none;
+
+}
+
+/* CAMPO DE PESQUISA */
+.pesquisar {
+
+    flex-shrink: 1;
+
+    height: 40px;
+    width: 300px;
+    max-width: 100%;
+    min-width: 0;
+
+    padding-left: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+}
+
+/* PERFIL */
+.header_divPerfil {
+
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+
+    max-width: 100%;
+    min-width: 0;
+
+    margin-right: 0;
+
+}
+
+.header_divPerfil img {
+
+    flex-shrink: 1;
+
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+
+    object-fit: contain;
+
+}
+
+/* CONTEUDO PRINCIPAL DO SITE */
+main {
+
+    background-color: black;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    min-width: 0;
+
+}
+
+/* ASIDE / BARRA LATERAL */
+aside {
+
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 190px;
+
+    position: sticky;
+    top: 0;
+    bottom: 0;
+
+    height: 100vh;
+    width: 190px;
+    min-width: 190px;
+
+    border-right: 2px solid red;
+
+}
+
+/* NAV DO ASIDE */
+aside nav {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    max-width: 100%;
+
+    margin-top: 10px;
+
+}
+
+/* LISTA DO ASIDE */
+aside ul {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    max-width: 100%;
+
+}
+
+aside li {
+
+    list-style: none;
+
+    font-size: 20px;
+
+    max-width: 100%;
+
+}
+
+aside a {
+
+    color: white;
+
+    text-decoration: none;
+
+    overflow-wrap: break-word;
+
+    transition: 0.3s;
+
+}
+
+aside a:hover {
+
+    color: red;
+
+}
+
+/* LINHA DO ASIDE */
+aside hr {
+
+    background-color: red;
+
+    align-self: center;
+
+    height: 1px;
+    width: 150px;
+    max-width: 100%;
+
+    border: none;
+
+}
+
+/* SECTION PRINCIPAL DO SITE */
+.main_sectionPrin {
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex: 1 1 0;
+
+    min-width: 0;
+    max-width: 100%;
+
+    margin-top: 20px;
+    margin-left: 20px;
+
+    overflow-x: hidden;
+
+}
+
+/* LINHAS HORIZONTAIS DA SECTION */
+.main_sectionPrin hr {
+
+    background-color: red;
+
+    align-self: flex-start;
+
+    height: 1px;
+    width: 97%;
+    max-width: 97%;
+
+    border: none;
+
+}
+
+
+/* CONFIGURAÇÕES DO RODAPÉ */
+footer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    height: auto;
+    min-height: 90px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 15px 20px;
+
+    border: 2px solid red;
+
+    overflow: hidden;
+
+}
+
+/* SEÇÃO "SOBRE" */
+#section_sobre {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    min-width: 0;
+    max-width: 100%;
+
+}
+
+#section_sobre a {
+
+    color: white;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    max-width: 100%;
+
+    transition: 0.3s;
+
+    overflow-wrap: break-word;
+
+}
+
+#section_sobre a:hover {
+
+    color: red;
+
+}
+
+/* SEÇÃO COPYRIGHT */
+#section_copy {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    max-width: 100%;
+
+}
+
+#section_copy p {
+
+    text-align: center;
+
+    font-size: 20px;
+
+    max-width: 100%;
+
+    overflow-wrap: break-word;
+
+}
+
+/* SEÇÃO REDES SOCIAIS */
+#section_redes {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-width: 0;
+    max-width: 100%;
+    
+}
+
+#section_redes a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    max-width: 100%;
+
+    transition: 0.3s;
+
+    overflow-wrap: break-word;
+
+}
+
+#section_redes a:hover {
+
+    color: red;
+
+}
+
+#section_redes ul {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    text-align: center;
+
+    list-style: none;
+
+    max-width: 100%;
+
+}
+
+/* PROTEÇÃO FINAL CONTRA ESTOURO HORIZONTAL */
+header, main, section, aside, footer, div {
+
+    min-width: 0;
+    max-width: 100%;
+
+}

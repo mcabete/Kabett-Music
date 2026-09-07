@@ -1,61 +1,80 @@
-/*
-Cores principais: Vermelho ( #FF0000 ), Preto ( #000000 ) e Branco ( #FFFFFF )
-Eu uso a pagina da microosft no 80%, por isso fica diferente em outros computadores que estão em 100%
-*/
+/* Cores principais: Vermelho ( #FF0000 ) Preto ( #000000 ) Branco ( #FFFFFF ) */
 
-/*configuração universal do site*/
+/* CONFIGURAÇÃO UNIVERSAL DO SITE */
 * {
 
     margin: 0px;
     padding: 0px;
-
     font-family: Arial;
+    box-sizing: border-box;
 
 }
 
-/*configuração do body tag do html*/
+/* CONFIGURAÇÃO DO BODY */
 body {
 
     background-color: black;
-
     color: white;
+
+    display: flex;
+    flex-direction: column;
 
     font-family: Arial;
 
+    width: 100%;
+    min-height: 100vh;
+
 }
 
-/*configuração do cabeçalho do site*/
+/* CONFIGURAÇÃO DO CABEÇALHO */
 header {
 
     background-color: black;
 
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 
-    padding-top: 20px;
-    padding-bottom: 15px;
+    height: auto;
+    min-height: 120px;
+    width: 100%;
+    min-width: 0;
+
+    padding: 15px 30px;
 
     border-bottom: 2px solid red;
 
-    height: 90px;
-
 }
 
+/* LOGO DO HEADER */
 .header_divLogo {
 
-    margin-left: 60px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+
+    margin-left: 0;
+
+    max-width: 100%;
+    min-width: 0;
 
 }
 
 .header_divLogo img {
 
+    flex-shrink: 1;
+    
     height: 90px;
+    width: auto;
+    max-width: 100%;
+
+    object-fit: contain;
 
 }
 
+/* DIV DO HOME + PESQUISA */
 .header_divHoPes {
 
     display: flex;
@@ -63,28 +82,45 @@ header {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    flex: 1;
+    flex-wrap: wrap;
 
     text-align: center;
+
+    min-width: 0;
+    max-width: 100%;
 
 }
 
 .header_divHoPes img {
 
+    flex-shrink: 1;
+
     text-align: center;
+
     height: 50px;
+    width: auto;
+    max-width: 100%;
 
 }
 
 .header_divHoPes a {
 
+    flex-shrink: 1;
+
     text-decoration: none;
 
 }
 
+/* CAMPO DE PESQUISA */
 .pesquisar {
+
+    flex-shrink: 1;
 
     height: 40px;
     width: 300px;
+    max-width: 100%;
+    min-width: 0;
 
     padding-left: 5px;
 
@@ -93,67 +129,93 @@ header {
 
 }
 
+/* PERFIL */
 .header_divPerfil {
 
-    margin-right: 60px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+
+    max-width: 100%;
+    min-width: 0;
+
+    margin-right: 0;
 
 }
 
 .header_divPerfil img {
 
+    flex-shrink: 1;
+
     height: 60px;
+    width: auto;
+    max-width: 100%;
+
+    object-fit: contain;
 
 }
 
-/*Configurações do "conteiner principal do site*/
-
+/* CONTEUDO PRINCIPAL DO SITE */
 main {
-
-    display: grid;
-    grid-template-columns: 190px 1fr;
-    min-height: calc(100vh - 80px);
 
     background-color: black;
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    min-width: 0;
+
 }
 
-/*configurações do aside (Da "barra" lateral do site)*/
-
+/* ASIDE / BARRA LATERAL */
 aside {
 
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 190px;
-
-    border-right: 2px solid red;
+    background-color: black;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex: 0 1 190px;
 
-    background-color: black;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+
+    height: 100vh;
+    width: 190px;
+    min-width: 190px;
+
+    border-right: 2px solid red;
 
 }
 
+/* NAV DO ASIDE */
 aside nav {
 
     display: flex;
     flex-direction: column;
     gap: 20px;
 
+    max-width: 100%;
+
     margin-top: 10px;
 
 }
 
+/* LISTA DO ASIDE */
 aside ul {
 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
+    max-width: 100%;
 
 }
 
@@ -163,6 +225,8 @@ aside li {
 
     font-size: 20px;
 
+    max-width: 100%;
+
 }
 
 aside a {
@@ -170,6 +234,8 @@ aside a {
     color: white;
 
     text-decoration: none;
+
+    overflow-wrap: break-word;
 
     transition: 0.3s;
 
@@ -181,64 +247,79 @@ aside a:hover {
 
 }
 
+/* LINHA DO ASIDE */
 aside hr {
 
     background-color: red;
 
+    align-self: center;
+
     height: 1px;
     width: 150px;
+    max-width: 100%;
 
     border: none;
 
-    align-self: center;
-
 }
 
-
-
-/*Configurações da section principal do site*/
+/* SECTION PRINCIPAL DO SITE */
 .main_sectionPrin {
-
-    margin-top: 20px;
-    margin-left: 20px;
 
     display: flex;
     flex-direction: column;
     gap: 50px;
+    flex: 1 1 0;
+
+    min-width: 0;
+    max-width: 100%;
+
+    margin-top: 20px;
+    margin-left: 20px;
+
+    overflow-x: hidden;
 
 }
 
-
+/* LINHAS HORIZONTAIS DA SECTION */
 .main_sectionPrin hr {
 
     background-color: red;
 
+    align-self: flex-start;
+
     height: 1px;
     width: 97%;
+    max-width: 97%;
 
     border: none;
 
-    align-self: flex-start;
-
 }
 
-
+/* TÍTULO DAS CAPAS */
 .div_h2aCapas {
+
+    display: flex;
+    flex-direction: column;
 
     margin-top: 20px;
     margin-bottom: 20px;
 
+    max-width: 100%;
+
 }
 
+/* LINK DO TÍTULO DAS CAPAS */
 .div_h2aCapas a {
 
     color: white;
 
-    transition: 0.3s;
-
     text-decoration: none;
 
+    max-width: 100%;
 
+    transition: 0.3s;
+
+    overflow-wrap: break-word;
 
 }
 
@@ -248,23 +329,36 @@ aside hr {
 
 }
 
-
+/* ÁREA DAS CAPAS / ÁLBUNS */
 .section_figureImgCapas {
 
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
 
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    overflow: hidden;
+    
 }
 
+/* IMAGENS DAS CAPAS */
 .section_figureImgCapas img {
 
     height: 150px;
-
-    transition: 0.3s;
+    width: auto;
+    max-width: 100%;
 
     margin-bottom: 40px;
+
+    flex-shrink: 1;
+
+    object-fit: contain;
+
+    transition: 0.3s;
 
 }
 
@@ -274,22 +368,17 @@ aside hr {
 
 }
 
-
-/*O de baixo são de todos os generos*/
-.section_figureImgArtistas {
+/* TÍTULO DOS ARTISTAS */
+.div_h2aArtistas {
 
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-
-.div_h2aArtistas {
+    flex-direction: column;
 
     margin-top: 20px;
     margin-bottom: 10px;
+
+    max-width: 100%;
+    min-width: 0;
 
 }
 
@@ -299,7 +388,11 @@ aside hr {
 
     text-decoration: none;
 
+    max-width: 100%;
+
     transition: 0.3s;
+
+    overflow-wrap: break-word;
 
 }
 
@@ -309,9 +402,35 @@ aside hr {
 
 }
 
+/* ÁREA DOS ARTISTAS */
+.section_figureImgArtistas {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    text-align: center;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    overflow: hidden;
+
+}
+
+/* IMAGENS DOS ARTISTAS */
 .section_figureImgArtistas img {
 
+    flex-shrink: 1;
+
+    object-fit: contain;
+
     height: 150px;
+    width: auto;
+    max-width: 100%;
 
     margin-bottom: 15px;
 
@@ -325,14 +444,18 @@ aside hr {
 
 }
 
+/* LINKS DOS ARTISTAS */
 .section_figureImgArtistas a {
 
     color: white;
 
     text-decoration: none;
 
+    max-width: 100%;
+
     transition: 0.3s;
 
+    overflow-wrap: break-word;
 
 }
 
@@ -342,28 +465,56 @@ aside hr {
 
 }
 
+/* PARÁGRAFOS DA SECTION PRINCIPAL */
 .main_sectionPrin p {
 
     text-align: center;
+
     font-size: 20px;
 
     margin-top: 10px;
     margin-bottom: 30px;
 
+    max-width: 100%;
+
+    overflow-wrap: break-word;
 
 }
 
-/*configurações do rodapé do site*/
+/* CONFIGURAÇÕES DO RODAPÉ */
 footer {
 
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    height: auto;
+    min-height: 90px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 15px 20px;
 
     border: 2px solid red;
 
-    height: 90px;
+    overflow: hidden;
+
+}
+
+/* SEÇÃO "SOBRE" */
+#section_sobre {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    min-width: 0;
+    max-width: 100%;
 
 }
 
@@ -371,11 +522,17 @@ footer {
 
     color: white;
 
+    text-align: center;
+
     text-decoration: none;
 
     font-size: 20px;
 
+    max-width: 100%;
+
     transition: 0.3s;
+
+    overflow-wrap: break-word;
 
 }
 
@@ -385,10 +542,41 @@ footer {
 
 }
 
+/* SEÇÃO COPYRIGHT */
+#section_copy {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    max-width: 100%;
+
+}
+
 #section_copy p {
+
+    text-align: center;
 
     font-size: 20px;
 
+    max-width: 100%;
+
+    overflow-wrap: break-word;
+
+}
+
+/* SEÇÃO REDES SOCIAIS */
+#section_redes {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-width: 0;
+    max-width: 100%;
+    
 }
 
 #section_redes a {
@@ -399,7 +587,11 @@ footer {
 
     font-size: 18px;
 
+    max-width: 100%;
+
     transition: 0.3s;
+
+    overflow-wrap: break-word;
 
 }
 
@@ -411,8 +603,24 @@ footer {
 
 #section_redes ul {
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
     text-align: center;
 
     list-style: none;
+
+    max-width: 100%;
+
+}
+
+/* PROTEÇÃO FINAL CONTRA ESTOURO HORIZONTAL */
+header, main, section, aside, footer, div {
+
+    min-width: 0;
+    max-width: 100%;
 
 }
