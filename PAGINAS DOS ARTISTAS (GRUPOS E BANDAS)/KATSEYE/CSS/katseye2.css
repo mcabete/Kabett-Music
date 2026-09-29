@@ -314,7 +314,9 @@ aside hr {
     gap: 10px;
 
     width: 350px;
+    min-width: 250px;
     height: 550px;
+    min-height: 550px;
     
     padding: 20px;
 
@@ -408,10 +410,10 @@ aside hr {
 
     background-color: red;
 
-    width: 100px;
-    height: 30px;
+    width: 130px;
+    height: 40px;
 
-    font-size: 20px;
+    font-size: 17px;
 
     border-radius: 10px;
     border: 1px solid red;
