@@ -65,7 +65,7 @@ header {
 .header_divLogo img {
 
     flex-shrink: 1;
-
+    
     height: 90px;
     width: auto;
     max-width: 100%;
@@ -265,6 +265,8 @@ aside hr {
 /* SECTION PRINCIPAL DO SITE */
 .main_sectionPrin {
 
+    background-color: red;
+
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -275,156 +277,9 @@ aside hr {
 
     margin-top: 20px;
     margin-left: 20px;
+    margin-right: 20px;
 
     overflow-x: hidden;
-
-}
-
-/* Configuração da section principal dos cards de cada integrante */
-.section_principalInte{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 30px;
-
-}
-
-/* Configuração de um 'grupo' de três cards (as duas tem a mesma class) */
-.section_cardIntegrates{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    flex: 1 1 200px;
-
-}
-
-/* configuração de cada card  */
-.div_integrantes{
-
-    background-color: rgb(12, 12, 12);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
-
-    width: 350px;
-    min-width: 250px;
-    height: 550px;
-    min-height: 550px;
-    
-    padding: 20px;
-
-}
-
-/* configuração da imagem de cada card */
-.div_cardInteImg{
-
-    text-align: center;
-
-}
-
-.div_cardInteImg img{
-
-    width: 70%;
-
-}
-
-/* configuração das principais infos de cada integrante */
-.div_cardInteInfos{
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-}
-
-.div_cardInteH3 h3{
-
-    text-align: center;
-
-}
-
-.div_cardInteP {
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-}
-
-/* Configuração do botão conhecer mais */
-.div_botConheçaMaisInte{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-}
-
-.bot_conheçaMais{
-
-    background-color: red;
-
-    text-align: center;
-
-    width: 145px;
-    height: 30px;
-
-    margin-bottom: 10px;
-
-    font-size: 20px;
-
-    border-radius: 10px;
-    border: 1px solid red;
-
-}
-
-.bot_conheçaMais a{
-
-    color: white;
-
-    text-decoration: none;
-
-}
-
-
-/* Configurações das redes sociais das integrantes */
-.div_cardinteRedesSociais{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-
-}
-
-.div_cardinteRedesSociais button{
-
-    background-color: red;
-
-    width: 130px;
-    height: 40px;
-
-    font-size: 17px;
-
-    border-radius: 10px;
-    border: 1px solid red;
-
-}
-
-.div_cardinteRedesSociais a{
-
-    color: white;
-
-    text-decoration: none;
 
 }
 
@@ -524,7 +379,7 @@ footer {
 
     min-width: 0;
     max-width: 100%;
-
+    
 }
 
 #section_redes a {
@@ -566,12 +421,7 @@ footer {
 }
 
 /* PROTEÇÃO FINAL CONTRA ESTOURO HORIZONTAL */
-header,
-main,
-section,
-aside,
-footer,
-div {
+header, main, section, aside, footer, div {
 
     min-width: 0;
     max-width: 100%;
