@@ -1,55 +1,78 @@
-/*configuração universal do site*/
+/* CONFIGURAÇÃO UNIVERSAL DO SITE */
 * {
 
     margin: 0px;
     padding: 0px;
-
     font-family: Arial;
+    box-sizing: border-box;
 
 }
 
-/*configuração do body tag do html*/
+/* CONFIGURAÇÃO DO BODY */
 body {
 
-    background-color: rgba(0, 0, 0, 0.973);
-
+    background-color: black;
     color: white;
+
+    display: flex;
+    flex-direction: column;
 
     font-family: Arial;
 
+    width: 100%;
+    min-height: 100vh;
+
 }
 
-/*configuração do cabeçalho do site*/
+/* CONFIGURAÇÃO DO CABEÇALHO */
 header {
 
     background-color: black;
 
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 
-    padding-top: 20px;
-    padding-bottom: 15px;
+    height: auto;
+    min-height: 120px;
+    width: 100%;
+    min-width: 0;
+
+    padding: 15px 30px;
 
     border-bottom: 2px solid red;
 
-    height: 60px;
-
 }
 
+/* LOGO DO HEADER */
 .header_divLogo {
 
-    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+
+    margin-left: 0;
+
+    max-width: 100%;
+    min-width: 0;
 
 }
 
 .header_divLogo img {
 
+    flex-shrink: 1;
+
     height: 90px;
+    width: auto;
+    max-width: 100%;
+
+    object-fit: contain;
 
 }
 
+/* DIV DO HOME + PESQUISA */
 .header_divHoPes {
 
     display: flex;
@@ -57,28 +80,45 @@ header {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    flex: 1;
+    flex-wrap: wrap;
 
     text-align: center;
+
+    min-width: 0;
+    max-width: 100%;
 
 }
 
 .header_divHoPes img {
 
+    flex-shrink: 1;
+
     text-align: center;
-    height: 36px;
+
+    height: 50px;
+    width: auto;
+    max-width: 100%;
 
 }
 
 .header_divHoPes a {
 
+    flex-shrink: 1;
+
     text-decoration: none;
 
 }
 
+/* CAMPO DE PESQUISA */
 .pesquisar {
 
-    height: 30px;
-    width: 250px;
+    flex-shrink: 1;
+
+    height: 40px;
+    width: 300px;
+    max-width: 100%;
+    min-width: 0;
 
     padding-left: 5px;
 
@@ -87,63 +127,97 @@ header {
 
 }
 
+/* PERFIL */
 .header_divPerfil {
 
-    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+
+    max-width: 100%;
+    min-width: 0;
+
+    margin-right: 0;
 
 }
 
 .header_divPerfil img {
 
+    flex-shrink: 1;
+
     height: 60px;
+    width: auto;
+    max-width: 100%;
+
+    object-fit: contain;
 
 }
 
-/*Configurações do "conteiner principal do site*/
-
+/* CONTEUDO PRINCIPAL DO SITE */
 main {
+    background-color: black;
 
-    display: grid;
-    grid-template-columns: 190px 1fr;
-    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
 
+    flex: 1 0 auto;
+
+    width: 100%;
+    min-width: 0;
 }
 
-/*configurações do aside (Da "barra" lateral do site)*/
-
+/* ASIDE / BARRA LATERAL */
 aside {
 
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 190px;
-
-    border-right: 2px solid red;
+    background-color: black;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    flex: 0 1 190px;
+
+    position: sticky;
+    top: 0;
+    bottom: 0;
+
+    align-self: flex-start;
+    /* NOVO: mantém o sticky funcionando */
+
+    min-height: 100vh;
+    /* ALTERADO: era height: 100vh */
+    width: 190px;
+    min-width: 190px;
+
+    border-right: 2px solid red;
 
 }
 
+/* NAV DO ASIDE */
 aside nav {
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: clamp(8px, 2vh, 20px);
+    /* ALTERADO: era 20px */
 
-    margin-top: 10px;
+    max-width: 100%;
+
+    margin-top: auto;
+    margin-bottom: auto;
 
 }
 
+/* LISTA DO ASIDE */
 aside ul {
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: clamp(4px, 1.2vh, 10px);
+    /* ALTERADO: era 10px */
+
+    max-width: 100%;
 
 }
 
@@ -151,7 +225,10 @@ aside li {
 
     list-style: none;
 
-    font-size: 20px;
+    font-size: clamp(12px, 2.6vh, 20px);
+    /* ALTERADO: era 20px */
+
+    max-width: 100%;
 
 }
 
@@ -160,6 +237,8 @@ aside a {
     color: white;
 
     text-decoration: none;
+
+    overflow-wrap: break-word;
 
     transition: 0.3s;
 
@@ -171,35 +250,37 @@ aside a:hover {
 
 }
 
+/* LINHA DO ASIDE */
 aside hr {
 
     background-color: red;
 
+    align-self: center;
+
     height: 1px;
     width: 150px;
+    max-width: 100%;
 
     border: none;
 
-    align-self: center;
-
 }
 
-
-
-/*Configurações da section principal do site*/
+/* SECTION PRINCIPAL DO SITE */
 .main_sectionPrin {
-
-    margin-top: 20px;
-    margin-left: 20px;
 
     display: flex;
     flex-direction: column;
     gap: 50px;
+    flex: 1 1 0;
+
+    min-width: 0;
+    max-width: 100%;
+
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 
 }
-
-
-
 
 #main_section1 h1 {
 
@@ -345,18 +426,40 @@ aside hr {
     color: red;
 
 }
-
-/*configurações do rodapé do site*/
+/* CONFIGURAÇÕES DO RODAPÉ */
 footer {
 
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    height: auto;
+    min-height: 90px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 15px 20px;
 
     border: 2px solid red;
 
-    height: 90px;
+    overflow: hidden;
+
+}
+
+/* SEÇÃO "SOBRE" */
+#section_sobre {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    min-width: 0;
+    max-width: 100%;
 
 }
 
@@ -364,11 +467,17 @@ footer {
 
     color: white;
 
+    text-align: center;
+
     text-decoration: none;
 
     font-size: 20px;
 
+    max-width: 100%;
+
     transition: 0.3s;
+
+    overflow-wrap: break-word;
 
 }
 
@@ -378,9 +487,40 @@ footer {
 
 }
 
+/* SEÇÃO COPYRIGHT */
+#section_copy {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    max-width: 100%;
+
+}
+
 #section_copy p {
 
+    text-align: center;
+
     font-size: 20px;
+
+    max-width: 100%;
+
+    overflow-wrap: break-word;
+
+}
+
+/* SEÇÃO REDES SOCIAIS */
+#section_redes {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-width: 0;
+    max-width: 100%;
 
 }
 
@@ -392,7 +532,11 @@ footer {
 
     font-size: 18px;
 
+    max-width: 100%;
+
     transition: 0.3s;
+
+    overflow-wrap: break-word;
 
 }
 
@@ -404,8 +548,29 @@ footer {
 
 #section_redes ul {
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
     text-align: center;
 
     list-style: none;
+
+    max-width: 100%;
+
+}
+
+/* PROTEÇÃO FINAL CONTRA ESTOURO HORIZONTAL */
+header,
+main,
+section,
+aside,
+footer,
+div {
+
+    min-width: 0;
+    max-width: 100%;
 
 }
