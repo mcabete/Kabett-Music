@@ -65,7 +65,7 @@ header {
 .header_divLogo img {
 
     flex-shrink: 1;
-    
+
     height: 90px;
     width: auto;
     max-width: 100%;
@@ -157,18 +157,16 @@ header {
 
 /* CONTEUDO PRINCIPAL DO SITE */
 main {
-
     background-color: black;
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: stretch;
 
-    min-height: calc(100vh - 80px);
+    flex: 1 0 auto;
+
     width: 100%;
     min-width: 0;
-
 }
 
 /* ASIDE / BARRA LATERAL */
@@ -179,14 +177,17 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     flex: 0 1 190px;
 
     position: sticky;
     top: 0;
     bottom: 0;
 
-    height: 100vh;
+    align-self: flex-start;
+    /* NOVO: mantém o sticky funcionando */
+
+    min-height: 100vh;
+    /* ALTERADO: era height: 100vh */
     width: 190px;
     min-width: 190px;
 
@@ -199,11 +200,13 @@ aside nav {
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: clamp(8px, 2vh, 20px);
+    /* ALTERADO: era 20px */
 
     max-width: 100%;
 
-    margin-top: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
 
 }
 
@@ -213,7 +216,8 @@ aside ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: clamp(4px, 1.2vh, 10px);
+    /* ALTERADO: era 10px */
 
     max-width: 100%;
 
@@ -223,7 +227,8 @@ aside li {
 
     list-style: none;
 
-    font-size: 20px;
+    font-size: clamp(12px, 2.6vh, 20px);
+    /* ALTERADO: era 20px */
 
     max-width: 100%;
 
@@ -276,8 +281,6 @@ aside hr {
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
-
-    overflow-x: hidden;
 
 }
 
@@ -376,7 +379,7 @@ footer {
 
     min-width: 0;
     max-width: 100%;
-    
+
 }
 
 #section_redes a {
@@ -418,7 +421,12 @@ footer {
 }
 
 /* PROTEÇÃO FINAL CONTRA ESTOURO HORIZONTAL */
-header, main, section, aside, footer, div {
+header,
+main,
+section,
+aside,
+footer,
+div {
 
     min-width: 0;
     max-width: 100%;
