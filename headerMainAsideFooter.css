@@ -275,26 +275,11 @@ aside hr {
 
     margin-top: 20px;
     margin-left: 20px;
+    margin-right: 20px;
 
     overflow-x: hidden;
 
 }
-
-/* LINHAS HORIZONTAIS DA SECTION */
-.main_sectionPrin hr {
-
-    background-color: red;
-
-    align-self: flex-start;
-
-    height: 1px;
-    width: 97%;
-    max-width: 97%;
-
-    border: none;
-
-}
-
 
 /* CONFIGURAÇÕES DO RODAPÉ */
 footer {

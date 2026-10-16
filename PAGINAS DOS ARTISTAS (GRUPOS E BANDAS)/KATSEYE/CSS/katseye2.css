@@ -275,156 +275,211 @@ aside hr {
 
     margin-top: 20px;
     margin-left: 20px;
+    margin-right: 20px;
 
     overflow-x: hidden;
 
 }
 
-/* Configuração da section principal dos cards de cada integrante */
-.section_principalInte{
+/* CONFIGURAÇÕES DOS CARDS DAS INTEGRANTES */
+.section_princiaplCard{
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 30px;
+    gap: 90px;
 
 }
 
-/* Configuração de um 'grupo' de três cards (as duas tem a mesma class) */
-.section_cardIntegrates{
+.section_integrantesCard {
 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    gap: 30px;
     flex-wrap: wrap;
-    flex: 1 1 200px;
 
 }
 
-/* configuração de cada card  */
-.div_integrantes{
-
-    background-color: rgb(12, 12, 12);
+.cardIntegrantes {
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
+    justify-content: center;
+    gap: 30px;
 
-    width: 350px;
+    width: 410px;
     min-width: 250px;
-    height: 550px;
+    height: 600px;
     min-height: 550px;
-    
+
     padding: 20px;
 
+    border-radius: 10px;
+    border: 2px solid red;
+    box-shadow: 1px 0px 15px 1px red;
+
+    transition: 0.3s;
 }
 
-/* configuração da imagem de cada card */
-.div_cardInteImg{
+.cardIntegrantes:hover {
 
-    text-align: center;
-
-}
-
-.div_cardInteImg img{
-
-    width: 70%;
+    transform: translateY(-10px);
+    /* Faz o card subir 10 pixels no eixo Y */
 
 }
 
-/* configuração das principais infos de cada integrante */
-.div_cardInteInfos{
+.section_divImgEtitulo {
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 
 }
 
-.div_cardInteH3 h3{
+/* Configuração da IMAGEM */
+.imgCard {
 
-    text-align: center;
+    width: 195px;
 
 }
 
-.div_cardInteP {
+/* Configurações doa TITULOS */
+.section_divCardTitulo {
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+
+
+    width: 100%;
 
 }
 
-/* Configuração do botão conhecer mais */
-.div_botConheçaMaisInte{
+.section_divCardTitulo h3 {
+
+    margin: 0px;
+    padding: 0px;
+
+    text-align: center;
+
+    font-size: 25px;
+
+}
+
+.section_divCardTitulo h4 {
 
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 18px;
+
 
 }
 
-.bot_conheçaMais{
+span img {
 
-    background-color: red;
+    width: 5px;
 
-    text-align: center;
-
-    width: 145px;
-    height: 30px;
-
-    margin-bottom: 10px;
-
-    font-size: 20px;
-
-    border-radius: 10px;
-    border: 1px solid red;
+    margin-bottom: 2px;
 
 }
 
-.bot_conheçaMais a{
+/* Configurações de tudo que está dentro da DIV DAS INFORMAÇÕES E BOTÕES */
+.section_divInfosEbots {
 
-    color: white;
-
-    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 
 }
 
+/* Configurações das INFORMAÇÕES MAIS IMPORTANTES */
+.section_divCardInfos {
 
-/* Configurações das redes sociais das integrantes */
-.div_cardinteRedesSociais{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 80%;
+
+}
+
+.section_divCardInfos p {
+
+    font-size: 19px;
+
+}
+
+.section_divCardInfos strong {
+
+    color: red;
+
+}
+
+/* Configurações dos BOTÕES */
+.section_divCardBot {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.sectin_disCardBotRedes {
 
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 
 }
 
-.div_cardinteRedesSociais button{
+.sectin_disCardBotRedes button {
 
     background-color: red;
 
-    width: 130px;
-    height: 40px;
+    width: 120px;
+    height: 35px;
+
+    border-radius: 10px;
+    border: none;
+
+
+}
+
+.sectin_disCardBotRedes a {
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-size: 17px;
+
+}
+
+
+
+.sectin_disCardBotMore input {
+
+    background-color: red;
+
+    width: 120px;
+    height: 35px;
 
     font-size: 17px;
 
     border-radius: 10px;
-    border: 1px solid red;
-
-}
-
-.div_cardinteRedesSociais a{
-
-    color: white;
-
-    text-decoration: none;
+    border: none;
 
 }
 
