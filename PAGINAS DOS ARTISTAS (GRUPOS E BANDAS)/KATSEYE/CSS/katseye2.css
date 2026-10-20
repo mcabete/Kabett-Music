@@ -289,6 +289,8 @@ aside hr {
     flex-direction: column;
     gap: 90px;
 
+    margin-bottom: 20px;
+
 }
 
 .section_integrantesCard {
@@ -298,6 +300,7 @@ aside hr {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
 
 }
 
@@ -306,11 +309,11 @@ aside hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 
-    width: 410px;
+    width: 440px;
     min-width: 250px;
-    height: 600px;
+    height: 640px;
     min-height: 550px;
 
     padding: 20px;
