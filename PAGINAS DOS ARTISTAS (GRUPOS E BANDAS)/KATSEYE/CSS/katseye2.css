@@ -1,16 +1,13 @@
 /* CONFIGURAÇÃO UNIVERSAL DO SITE */
 * {
-
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: Arial;
     box-sizing: border-box;
-
 }
 
 /* CONFIGURAÇÃO DO BODY */
 body {
-
     background-color: black;
     color: white;
 
@@ -21,18 +18,18 @@ body {
 
     width: 100%;
     min-height: 100vh;
-
+    min-width: 0;
 }
 
 /* CONFIGURAÇÃO DO CABEÇALHO */
 header {
-
     background-color: black;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
 
     height: auto;
@@ -40,80 +37,73 @@ header {
     width: 100%;
     min-width: 0;
 
-    padding: 15px 30px;
+    padding: 15px clamp(10px, 2vw, 30px);
 
     border-bottom: 2px solid red;
-
 }
 
 /* LOGO DO HEADER */
 .header_divLogo {
-
     display: flex;
     align-items: center;
-    flex-shrink: 1;
+    flex: 0 1 auto;
 
     margin-left: 0;
 
     max-width: 100%;
     min-width: 0;
-
 }
 
 .header_divLogo img {
-
     flex-shrink: 1;
 
-    height: 90px;
+    height: clamp(50px, 7vw, 90px);
     width: auto;
     max-width: 100%;
 
     object-fit: contain;
-
 }
 
 /* DIV DO HOME + PESQUISA */
 .header_divHoPes {
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex: 1;
+
+    flex: 1 1 200px;
     flex-wrap: wrap;
 
     text-align: center;
 
     min-width: 0;
     max-width: 100%;
-
 }
 
 .header_divHoPes img {
-
     flex-shrink: 1;
 
     text-align: center;
 
-    height: 50px;
+    height: clamp(30px, 4vw, 50px);
     width: auto;
     max-width: 100%;
 
+    object-fit: contain;
 }
 
 .header_divHoPes a {
-
     flex-shrink: 1;
+    min-width: 0;
+    max-width: 100%;
 
     text-decoration: none;
-
 }
 
 /* CAMPO DE PESQUISA */
 .pesquisar {
-
-    flex-shrink: 1;
+    flex: 1 1 180px;
 
     height: 40px;
     width: 300px;
@@ -124,36 +114,31 @@ header {
 
     border: none;
     border-radius: 10px;
-
 }
 
 /* PERFIL */
 .header_divPerfil {
-
     display: flex;
     align-items: center;
-    flex-shrink: 1;
+    flex: 0 1 auto;
 
     max-width: 100%;
     min-width: 0;
 
     margin-right: 0;
-
 }
 
 .header_divPerfil img {
-
     flex-shrink: 1;
 
-    height: 60px;
+    height: clamp(35px, 5vw, 60px);
     width: auto;
     max-width: 100%;
 
     object-fit: contain;
-
 }
 
-/* CONTEUDO PRINCIPAL DO SITE */
+/* CONTEÚDO PRINCIPAL DO SITE */
 main {
     background-color: black;
 
@@ -161,22 +146,21 @@ main {
     flex-direction: row;
     align-items: stretch;
 
-    flex: 1 0 auto;
+    flex: 1 1 auto;
 
     width: 100%;
     min-width: 0;
+    max-width: 100%;
 }
 
 /* ASIDE / BARRA LATERAL */
-
-/* ASIDE / BARRA LATERAL */
 aside {
-
     background-color: black;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
     flex: 0 1 clamp(120px, 15vw, 190px);
 
     position: sticky;
@@ -188,14 +172,13 @@ aside {
     min-height: 100vh;
     width: clamp(120px, 15vw, 190px);
     min-width: 0;
+    max-width: 100%;
 
     border-right: 2px solid red;
-
 }
 
 /* NAV DO ASIDE */
 aside nav {
-
     display: flex;
     flex-direction: column;
     gap: clamp(8px, 2vh, 20px);
@@ -207,11 +190,11 @@ aside nav {
     margin-top: auto;
     margin-bottom: auto;
 
+    box-sizing: border-box;
 }
 
 /* LISTA DO ASIDE */
 aside ul {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,10 +204,10 @@ aside ul {
     max-width: 100%;
     min-width: 0;
 
+    box-sizing: border-box;
 }
 
 aside li {
-
     list-style: none;
 
     font-size: clamp(12px, 1.3vw, 20px);
@@ -235,99 +218,102 @@ aside li {
 
     text-align: center;
     overflow-wrap: anywhere;
-
+    box-sizing: border-box;
 }
 
 /* LINKS DO ASIDE */
 aside a {
-
     display: block;
 
     color: white;
 
     text-decoration: none;
 
+    width: 100%;
     max-width: 100%;
+    min-width: 0;
+
     overflow-wrap: anywhere;
+    box-sizing: border-box;
 
     transition: 0.3s;
-
 }
 
 aside a:hover {
-
     color: red;
-
 }
 
 /* LINHA DO ASIDE */
 aside hr {
-
     background-color: red;
 
     align-self: center;
 
     height: 1px;
-    width: 150px;
+    width: min(150px, 90%);
     max-width: 100%;
 
     border: none;
-
 }
 
-
-/* SECTION PRINCIPAL DO SITE */
+/* SEÇÃO PRINCIPAL DO SITE */
 .main_sectionPrin {
-
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: clamp(25px, 4vw, 50px);
+
     flex: 1 1 0;
 
     min-width: 0;
     max-width: 100%;
 
     margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-
+    margin-left: clamp(10px, 2vw, 20px);
+    margin-right: clamp(10px, 2vw, 20px);
 }
 
 /* CONFIGURAÇÕES DOS CARDS DAS INTEGRANTES */
-.section_princiaplCard{
-
+.section_princiaplCard {
     display: flex;
     flex-direction: column;
-    gap: 90px;
+    gap: 40px;
 
-    margin-bottom: 20px;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
 
 }
 
 .section_integrantesCard {
-
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
 
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
 }
 
-.cardIntegrantes {
+/* CARDS DAS INTEGRANTES */
 
+.cardIntegrantes {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
 
-    width: 440px;
-    min-width: 250px;
-    height: 640px;
+    flex: 1 1 260px;
+    width: auto;
+    min-width: 0;
+    max-width: 340px;
+
+    height: auto;
     min-height: 550px;
 
-    padding: 20px;
+    padding: clamp(12px, 2vw, 20px);
 
     border-radius: 10px;
     border: 2px solid red;
@@ -337,14 +323,11 @@ aside hr {
 }
 
 .cardIntegrantes:hover {
-
     transform: translateY(-10px);
-    /* Faz o card subir 10 pixels no eixo Y */
-
 }
 
+/* IMAGEM E TÍTULO DO CARD */
 .section_divImgEtitulo {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -352,156 +335,167 @@ aside hr {
     flex-wrap: wrap;
     gap: 10px;
 
+    text-align: center;
+
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
 }
 
-/* Configuração da IMAGEM */
+/* CONFIGURAÇÃO DA IMAGEM */
 .imgCard {
-
-    width: 195px;
-
+    width: min(195px, 100%);
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-/* Configurações doa TITULOS */
+/* CONFIGURAÇÕES DOS TÍTULOS */
 .section_divCardTitulo {
-
     display: flex;
     flex-direction: column;
     gap: 5px;
 
-
     width: 100%;
-
+    min-width: 0;
+    max-width: 100%;
 }
 
 .section_divCardTitulo h3 {
-
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 
     text-align: center;
+    overflow-wrap: anywhere;
 
-    font-size: 25px;
-
+    font-size: 22px;
 }
 
 .section_divCardTitulo h4 {
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 6px;
 
-    font-size: 18px;
+    min-width: 0;
+    max-width: 100%;
 
+    text-align: center;
+    font-size: 15px;
+    overflow-wrap: anywhere;
 
 }
 
 span img {
-
     width: 5px;
+    max-width: 100%;
 
     margin-bottom: 2px;
-
 }
 
-/* Configurações de tudo que está dentro da DIV DAS INFORMAÇÕES E BOTÕES */
+/* INFORMAÇÕES E BOTÕES */
 .section_divInfosEbots {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: clamp(15px, 3vw, 30px);
 
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
 }
 
-/* Configurações das INFORMAÇÕES MAIS IMPORTANTES */
+/* INFORMAÇÕES MAIS IMPORTANTES */
 .section_divCardInfos {
-
     display: flex;
     flex-direction: column;
     gap: 15px;
 
     width: 80%;
-
+    min-width: 0;
+    max-width: 100%;
 }
 
 .section_divCardInfos p {
-
-    font-size: 19px;
-
+    font-size: 15px;
+    overflow-wrap: anywhere;
 }
 
 .section_divCardInfos strong {
-
     color: red;
-
 }
 
-/* Configurações dos BOTÕES */
+/* BOTÕES */
 .section_divCardBot {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     gap: 10px;
+
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
 }
 
 .sectin_disCardBotRedes {
-
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
 
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
 }
 
 .sectin_disCardBotRedes button {
-
     background-color: red;
 
+    flex: 1 1 100px;
     width: 120px;
+    max-width: 100%;
+    min-width: 0;
     height: 35px;
 
     border-radius: 10px;
     border: none;
-
-
 }
 
 .sectin_disCardBotRedes a {
-
     text-decoration: none;
-
     text-align: center;
 
-    font-size: 17px;
-
+    font-size: clamp(13px, 1.4vw, 17px);
+    overflow-wrap: anywhere;
+    max-width: 100%;
 }
 
-
+.sectin_disCardBotMore {
+    max-width: 100%;
+    min-width: 0;
+}
 
 .sectin_disCardBotMore input {
-
     background-color: red;
 
-    width: 120px;
+    width: min(120px, 100%);
+    max-width: 100%;
+    min-width: 0;
     height: 35px;
 
-    font-size: 17px;
+    font-size: clamp(13px, 1.4vw, 17px);
 
     border-radius: 10px;
     border: none;
-
 }
-
 
 /* CONFIGURAÇÕES DO RODAPÉ */
 footer {
-
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -515,135 +509,124 @@ footer {
     max-width: 100%;
     min-width: 0;
 
-    padding: 15px 20px;
+    padding: 15px clamp(10px, 2vw, 20px);
 
     border: 2px solid red;
 
     overflow: hidden;
-
 }
 
-/* SEÇÃO "SOBRE" */
+/* SEÇÃO SOBRE */
 #section_sobre {
-
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
+
+    flex: 1 1 150px;
+
+    min-width: 0;
+    max-width: 100%;
+}
+
+#section_sobre a {
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: clamp(14px, 1.6vw, 20px);
 
     min-width: 0;
     max-width: 100%;
 
-}
-
-#section_sobre a {
-
-    color: white;
-
-    text-align: center;
-
-    text-decoration: none;
-
-    font-size: 20px;
-
-    max-width: 100%;
-
     transition: 0.3s;
 
-    overflow-wrap: break-word;
-
+    overflow-wrap: anywhere;
 }
 
 #section_sobre a:hover {
-
     color: red;
-
 }
 
 /* SEÇÃO COPYRIGHT */
 #section_copy {
-
     display: flex;
     align-items: center;
     justify-content: center;
 
+    flex: 1 1 200px;
+
     min-width: 0;
     max-width: 100%;
-
 }
 
 #section_copy p {
-
     text-align: center;
 
-    font-size: 20px;
+    font-size: clamp(14px, 1.6vw, 20px);
 
+    min-width: 0;
     max-width: 100%;
 
-    overflow-wrap: break-word;
-
+    overflow-wrap: anywhere;
 }
 
 /* SEÇÃO REDES SOCIAIS */
 #section_redes {
-
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 
+    flex: 1 1 150px;
+
     min-width: 0;
     max-width: 100%;
-
 }
 
 #section_redes a {
-
     color: white;
 
     text-decoration: none;
 
-    font-size: 18px;
+    font-size: clamp(13px, 1.5vw, 18px);
 
+    min-width: 0;
     max-width: 100%;
 
     transition: 0.3s;
 
-    overflow-wrap: break-word;
-
+    overflow-wrap: anywhere;
 }
 
 #section_redes a:hover {
-
     color: red;
-
 }
 
 #section_redes ul {
-
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
 
     text-align: center;
-
     list-style: none;
 
+    min-width: 0;
     max-width: 100%;
-
 }
 
-/* PROTEÇÃO FINAL CONTRA ESTOURO HORIZONTAL */
+/* PROTEÇÃO CONTRA ESTOURO HORIZONTAL */
 header,
 main,
 section,
 aside,
 footer,
 div {
-
     min-width: 0;
     max-width: 100%;
-
 }
