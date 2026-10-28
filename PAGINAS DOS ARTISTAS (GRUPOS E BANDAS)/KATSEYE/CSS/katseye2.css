@@ -21,15 +21,16 @@ body {
     min-width: 0;
 }
 
+
 /* CONFIGURAÇÃO DO CABEÇALHO */
 header {
+
     background-color: black;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     gap: 15px;
 
     height: auto;
@@ -37,73 +38,80 @@ header {
     width: 100%;
     min-width: 0;
 
-    padding: 15px clamp(10px, 2vw, 30px);
+    padding: 15px 30px;
 
     border-bottom: 2px solid red;
+
 }
 
 /* LOGO DO HEADER */
 .header_divLogo {
+
     display: flex;
     align-items: center;
-    flex: 0 1 auto;
+    flex-shrink: 1;
 
     margin-left: 0;
 
     max-width: 100%;
     min-width: 0;
+
 }
 
 .header_divLogo img {
+
     flex-shrink: 1;
 
-    height: clamp(50px, 7vw, 90px);
+    height: 90px;
     width: auto;
     max-width: 100%;
 
     object-fit: contain;
+
 }
 
 /* DIV DO HOME + PESQUISA */
 .header_divHoPes {
+
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
-
-    flex: 1 1 200px;
+    flex: 1;
     flex-wrap: wrap;
 
     text-align: center;
 
     min-width: 0;
     max-width: 100%;
+
 }
 
 .header_divHoPes img {
+
     flex-shrink: 1;
 
     text-align: center;
 
-    height: clamp(30px, 4vw, 50px);
+    height: 50px;
     width: auto;
     max-width: 100%;
 
-    object-fit: contain;
 }
 
 .header_divHoPes a {
+
     flex-shrink: 1;
-    min-width: 0;
-    max-width: 100%;
 
     text-decoration: none;
+
 }
 
 /* CAMPO DE PESQUISA */
 .pesquisar {
-    flex: 1 1 180px;
+
+    flex-shrink: 1;
 
     height: 40px;
     width: 300px;
@@ -114,28 +122,33 @@ header {
 
     border: none;
     border-radius: 10px;
+
 }
 
 /* PERFIL */
 .header_divPerfil {
+
     display: flex;
     align-items: center;
-    flex: 0 1 auto;
+    flex-shrink: 1;
 
     max-width: 100%;
     min-width: 0;
 
     margin-right: 0;
+
 }
 
 .header_divPerfil img {
+
     flex-shrink: 1;
 
-    height: clamp(35px, 5vw, 60px);
+    height: 60px;
     width: auto;
     max-width: 100%;
 
     object-fit: contain;
+
 }
 
 /* CONTEÚDO PRINCIPAL DO SITE */
@@ -502,6 +515,8 @@ span img {
     border-radius: 10px;
     border: none;
 }
+
+
 
 /* CONFIGURAÇÕES DO RODAPÉ */
 footer {
