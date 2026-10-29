@@ -10,69 +10,50 @@
 body {
     background-color: black;
     color: white;
-
     display: flex;
     flex-direction: column;
-
     font-family: Arial;
-
     width: 100%;
     min-height: 100vh;
     min-width: 0;
 }
 
-
 /* CONFIGURAÇÃO DO CABEÇALHO */
 header {
-
     background-color: black;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-
     height: auto;
     min-height: 120px;
     width: 100%;
     min-width: 0;
-
     padding: 15px 30px;
-
     border-bottom: 2px solid red;
-
 }
 
 /* LOGO DO HEADER */
 .header_divLogo {
-
     display: flex;
     align-items: center;
     flex-shrink: 1;
-
     margin-left: 0;
-
     max-width: 100%;
     min-width: 0;
-
 }
 
 .header_divLogo img {
-
     flex-shrink: 1;
-
     height: 90px;
     width: auto;
     max-width: 100%;
-
     object-fit: contain;
-
 }
 
 /* DIV DO HOME + PESQUISA */
 .header_divHoPes {
-
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -80,87 +61,61 @@ header {
     gap: 10px;
     flex: 1;
     flex-wrap: wrap;
-
     text-align: center;
-
     min-width: 0;
     max-width: 100%;
-
 }
 
 .header_divHoPes img {
-
     flex-shrink: 1;
-
     text-align: center;
-
     height: 50px;
     width: auto;
     max-width: 100%;
-
 }
 
 .header_divHoPes a {
-
     flex-shrink: 1;
-
     text-decoration: none;
-
 }
 
 /* CAMPO DE PESQUISA */
 .pesquisar {
-
     flex-shrink: 1;
-
     height: 40px;
     width: 300px;
     max-width: 100%;
     min-width: 0;
-
     padding-left: 5px;
-
     border: none;
     border-radius: 10px;
-
 }
 
 /* PERFIL */
 .header_divPerfil {
-
     display: flex;
     align-items: center;
     flex-shrink: 1;
-
     max-width: 100%;
     min-width: 0;
-
     margin-right: 0;
-
 }
 
 .header_divPerfil img {
-
     flex-shrink: 1;
-
     height: 60px;
     width: auto;
     max-width: 100%;
-
     object-fit: contain;
-
 }
 
 /* CONTEÚDO PRINCIPAL DO SITE */
 main {
     background-color: black;
-
     display: flex;
     flex-direction: row;
     align-items: stretch;
-
     flex: 1 1 auto;
-
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -169,24 +124,18 @@ main {
 /* ASIDE / BARRA LATERAL */
 aside {
     background-color: black;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     flex: 0 1 clamp(120px, 15vw, 190px);
-
     position: sticky;
     top: 0;
     bottom: 0;
-
     align-self: flex-start;
-
     min-height: 100vh;
     width: clamp(120px, 15vw, 190px);
     min-width: 0;
     max-width: 100%;
-
     border-right: 2px solid red;
 }
 
@@ -195,14 +144,11 @@ aside nav {
     display: flex;
     flex-direction: column;
     gap: clamp(8px, 2vh, 20px);
-
     width: 100%;
     max-width: 100%;
     min-width: 0;
-
     margin-top: auto;
     margin-bottom: auto;
-
     box-sizing: border-box;
 }
 
@@ -212,23 +158,18 @@ aside ul {
     flex-direction: column;
     align-items: center;
     gap: clamp(4px, 1.2vh, 10px);
-
     width: 100%;
     max-width: 100%;
     min-width: 0;
-
     box-sizing: border-box;
 }
 
 aside li {
     list-style: none;
-
     font-size: clamp(12px, 1.3vw, 20px);
-
     width: 100%;
     max-width: 100%;
     min-width: 0;
-
     text-align: center;
     overflow-wrap: anywhere;
     box-sizing: border-box;
@@ -237,18 +178,13 @@ aside li {
 /* LINKS DO ASIDE */
 aside a {
     display: block;
-
     color: white;
-
     text-decoration: none;
-
     width: 100%;
     max-width: 100%;
     min-width: 0;
-
     overflow-wrap: anywhere;
     box-sizing: border-box;
-
     transition: 0.3s;
 }
 
@@ -259,13 +195,10 @@ aside a:hover {
 /* LINHA DO ASIDE */
 aside hr {
     background-color: red;
-
     align-self: center;
-
     height: 1px;
     width: min(150px, 90%);
     max-width: 100%;
-
     border: none;
 }
 
@@ -274,12 +207,9 @@ aside hr {
     display: flex;
     flex-direction: column;
     gap: clamp(25px, 4vw, 50px);
-
     flex: 1 1 0;
-
     min-width: 0;
     max-width: 100%;
-
     margin-top: 20px;
     margin-left: clamp(10px, 2vw, 20px);
     margin-right: clamp(10px, 2vw, 20px);
@@ -290,11 +220,9 @@ aside hr {
     display: flex;
     flex-direction: column;
     gap: 40px;
-
     width: 100%;
     min-width: 0;
     max-width: 100%;
-
 }
 
 .section_integrantesCard {
@@ -304,34 +232,27 @@ aside hr {
     align-items: stretch;
     flex-wrap: wrap;
     gap: 50px;
-
     width: 100%;
     min-width: 0;
     max-width: 100%;
 }
 
 /* CARDS DAS INTEGRANTES */
-
 .cardIntegrantes {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-
     flex: 1 1 260px;
     width: auto;
     min-width: 0;
     max-width: 340px;
-
     height: auto;
     min-height: 550px;
-
     padding: clamp(12px, 2vw, 20px);
-
     border-radius: 10px;
     border: 2px solid red;
     box-shadow: 1px 0px 15px 1px red;
-
     transition: 0.3s;
 }
 
@@ -347,9 +268,7 @@ aside hr {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-
     text-align: center;
-
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -368,7 +287,6 @@ aside hr {
     display: flex;
     flex-direction: column;
     gap: 5px;
-
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -377,10 +295,8 @@ aside hr {
 .section_divCardTitulo h3 {
     margin: 0;
     padding: 0;
-
     text-align: center;
     overflow-wrap: anywhere;
-
     font-size: 22px;
 }
 
@@ -391,20 +307,16 @@ aside hr {
     align-items: center;
     flex-wrap: wrap;
     gap: 6px;
-
     min-width: 0;
     max-width: 100%;
-
     text-align: center;
     font-size: 15px;
     overflow-wrap: anywhere;
-
 }
 
 span img {
     width: 5px;
     max-width: 100%;
-
     margin-bottom: 2px;
 }
 
@@ -415,7 +327,6 @@ span img {
     justify-content: center;
     align-items: center;
     gap: clamp(15px, 3vw, 30px);
-
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -426,7 +337,6 @@ span img {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
     width: 80%;
     min-width: 0;
     max-width: 100%;
@@ -448,7 +358,6 @@ span img {
     justify-content: center;
     align-items: center;
     gap: 10px;
-
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -460,7 +369,6 @@ span img {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -468,55 +376,226 @@ span img {
 
 .sectin_disCardBotRedes button {
     background-color: red;
-
     flex: 1 1 100px;
     width: 120px;
     max-width: 100%;
     min-width: 0;
     height: 35px;
-
     border-radius: 10px;
     border: none;
 }
 
 .sectin_disCardBotRedes a {
-
     color: white;
-
     text-decoration: none;
     text-align: center;
-
     font-size: clamp(13px, 1.4vw, 17px);
     overflow-wrap: anywhere;
     max-width: 100%;
 }
 
 .sectin_disCardBotMore {
-
     display: flex;
     justify-content: center;
-
     max-width: 100%;
     min-width: 100%;
 }
 
 .sectin_disCardBotMore input {
-
     background-color: red;
     color: white;
-
     width: min(120px, 100%);
     max-width: 100%;
     min-width: 120;
     height: 35px;
-
     font-size: clamp(13px, 1.4vw, 17px);
-
     border-radius: 10px;
     border: none;
 }
 
+/* Configurações DOS ALBUNS */
+.section_principalAlbuns {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 30%;
+}
 
+.legenda {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.legenda div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.legenda span {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: block;
+}
+
+.excelente {background: #60A5FA;}
+.muitoBom {background: #86EFAC;}
+.bom {background: #FACC15;}
+.regular {background: #FB923C;}
+.ruim {background: #EF4444;}
+
+.secion_album {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    width: 80%;
+    height: 500px;
+    padding: 13px 40px;
+    border-radius: 10px;
+    border: 2px solid red;
+    overflow-x: auto
+}
+
+.secion_album::-webkit-scrollbar {
+    width: 8px;
+}
+
+.secion_album::-webkit-scrollbar-track {
+    background: #000;
+    border-radius: 10px;
+}
+
+.secion_album::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+
+.secion_album::-webkit-scrollbar-thumb:hover {
+    background: #cc0000;
+}
+
+.section_divImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+}
+
+.section_divImg img {
+    width: 290px;
+}
+
+.section_divInfos {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.div_albunsTitulo {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.div_albunsLancaNota {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 13px;
+}
+
+.div_LancaNotaP p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 19px;
+}
+
+.div_LancaNotaP strong {
+    color: red;
+    font-size: 23px;
+}
+
+.div_albunsNotas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 7px;
+}
+
+.div_albunsNotas p {
+    margin-left: 5px;
+    font-size: 19px;
+}
+
+.div_albunsNotas img {
+    width: 20px;
+    height: 20px;
+}
+
+.div_albunsFaixas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+}
+
+.div_albunsListaMus {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    margin-left: 15px;
+    list-style: none;
+}
+
+.div_albunsListaMus li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 19px;
+    border-bottom: 2px solid red;
+}
+
+.div_AlbunsLisMusNotaEbot {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.div_AlbunsLisMusNotaEbot input {
+    background-color: red;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+}
+
+.div_albunsListaMus span {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: block;
+}
 
 /* CONFIGURAÇÕES DO RODAPÉ */
 footer {
@@ -526,17 +605,13 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-
     height: auto;
     min-height: 90px;
     width: 100%;
     max-width: 100%;
     min-width: 0;
-
     padding: 15px clamp(10px, 2vw, 20px);
-
     border: 2px solid red;
-
     overflow: hidden;
 }
 
@@ -547,26 +622,19 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-
     flex: 1 1 150px;
-
     min-width: 0;
     max-width: 100%;
 }
 
 #section_sobre a {
     color: white;
-
     text-align: center;
     text-decoration: none;
-
     font-size: clamp(14px, 1.6vw, 20px);
-
     min-width: 0;
     max-width: 100%;
-
     transition: 0.3s;
-
     overflow-wrap: anywhere;
 }
 
@@ -579,21 +647,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex: 1 1 200px;
-
     min-width: 0;
     max-width: 100%;
 }
 
 #section_copy p {
     text-align: center;
-
     font-size: clamp(14px, 1.6vw, 20px);
-
     min-width: 0;
     max-width: 100%;
-
     overflow-wrap: anywhere;
 }
 
@@ -603,25 +666,18 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     flex: 1 1 150px;
-
     min-width: 0;
     max-width: 100%;
 }
 
 #section_redes a {
     color: white;
-
     text-decoration: none;
-
     font-size: clamp(13px, 1.5vw, 18px);
-
     min-width: 0;
     max-width: 100%;
-
     transition: 0.3s;
-
     overflow-wrap: anywhere;
 }
 
@@ -636,10 +692,8 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-
     text-align: center;
     list-style: none;
-
     min-width: 0;
     max-width: 100%;
 }
